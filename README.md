@@ -282,6 +282,6 @@ tracert [alamat ip]
 ```
 
 Apabila sudah benar, maka outputnya akan seperti di bawah ini
-![img](./assets/Screenshot%2024-11-19%212301.png)
+![img](./assets/pingtracert.png)
 
 Yang paling rapih dan jelas akan dimerge ke repository ini dan mendapatkan poin keaktifan +6
