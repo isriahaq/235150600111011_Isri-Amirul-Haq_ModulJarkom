@@ -248,6 +248,9 @@ Periksa apakah konfigurasi routing sudah benar dengan melihat tabel routing
 show ip route
 ```
 
+Apabila sudah benar, maka outputnya akan seperti di bawah ini
+![img](./assets/router0.png)
+
 
 # Konfigurasi pada Router 1
 Konfigurasikan interface Serial Se0/0 pada Router 1 dengan alamat IP dan aktifkan interface
@@ -268,5 +271,17 @@ Periksa apakah konfigurasi routing sudah benar dengan melihat tabel routing
 ```zsh
 show ip route
 ```
+
+Apabila sudah benar, maka outputnya akan seperti di bawah ini
+![img](./assets/router1.png)
+
+
+Kita dapat menguji routingnya benar dengan melakukan ping atau tracert pada comment prompt
+```zsh
+tracert [alamat ip]
+```
+
+Apabila sudah benar, maka outputnya akan seperti di bawah ini
+![img](./assets/Screenshot%2024-11-19%212301.png)
 
 Yang paling rapih dan jelas akan dimerge ke repository ini dan mendapatkan poin keaktifan +6
