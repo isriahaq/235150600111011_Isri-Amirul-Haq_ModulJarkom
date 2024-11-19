@@ -227,8 +227,46 @@ Berikut ketentuan tugas bonus ini:
 - Berisi langkah beserta screenshot yang jelas
 - Tiap langkah harus dibuat mengikuti kaidah seperti dibawah
 
+
+# Konfigurasi pada Router 0
+Konfigurasikan interface Serial Se0/0 dengan alamat IP dan aktifkan interface
 ```zsh
-Langkah perintah harus dibungkus dengan code wrap zsh
+int S0/0
+ip add 200.200.10.1 255.255.255.0
+no sh
+exit
+```
+
+Tambahkan routing statis untuk mengarahkan lalu lintas ke subnet pada LAN yang dikelola Router 1 melalui Router 1
+```zsh
+ip route 194.68.10.0 255.255.255.0 200.200.10.2
+ip route 192.68.20.0 255.255.255.0 200.200.10.2
+```
+
+Periksa apakah konfigurasi routing sudah benar dengan melihat tabel routing
+```zsh
+show ip route
+```
+
+
+# Konfigurasi pada Router 1
+Konfigurasikan interface Serial Se0/0 pada Router 1 dengan alamat IP dan aktifkan interface
+```zsh
+int S0/0
+ip add 200.200.10.2 255.255.255.0
+no sh
+exit
+```
+
+Tambahkan routing statis untuk mengarahkan lalu lintas ke subnet pada LAN yang dikelola Router 0 melalui Router 0
+```zsh
+ip route 192.168.10.0 255.255.255.0 200.200.10.1
+ip route 192.168.20.0 255.255.255.0 200.200.10.1
+```
+
+Periksa apakah konfigurasi routing sudah benar dengan melihat tabel routing
+```zsh
+show ip route
 ```
 
 Yang paling rapih dan jelas akan dimerge ke repository ini dan mendapatkan poin keaktifan +6
