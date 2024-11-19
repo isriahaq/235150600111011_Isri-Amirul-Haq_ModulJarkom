@@ -282,6 +282,6 @@ tracert [alamat ip]
 ```
 
 Apabila sudah benar, maka outputnya akan seperti di bawah ini
-![img](./assets/assets/Screenshot%from%2024-11-19%21-18-08.png)
+![img](./assets/Screenshot%2024-11-19%212301.png)
 
 Yang paling rapih dan jelas akan dimerge ke repository ini dan mendapatkan poin keaktifan +6
